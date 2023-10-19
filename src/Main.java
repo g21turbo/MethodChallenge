@@ -13,6 +13,11 @@ public class Main {
 
         highScorePosition = calculateHighScorePosition(99);
         displayHighScorePosition("Steve", highScorePosition);
+
+        highScorePosition = newCalculateHighScorePosition(99);
+        displayHighScorePosition("Steve", highScorePosition);
+
+
     }
 
     public static void displayHighScorePosition(String name, int scorePosition) {
@@ -22,6 +27,7 @@ public class Main {
 
     public static int calculateHighScorePosition(int playerScore) {
 
+
         if (playerScore >= 1000){
             return 1;
         } else if (playerScore >= 500) {
@@ -30,6 +36,20 @@ public class Main {
             return 3;
         }
         return 4;
+
+    }
+
+    public static int newCalculateHighScorePosition(int playerScore) {
+
+        int position = 4;
+        if (playerScore >= 1000){
+            return 1;
+        } else if (playerScore >= 500) {
+            return 2;
+        } else if (playerScore >= 100) {
+            return 3;
+        }
+        return position;
 
     }
 }
